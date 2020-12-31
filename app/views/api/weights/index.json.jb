@@ -1,0 +1,9 @@
+
+@weights.map do |weight|
+  {
+    current_weight: weight.current_weight,
+    date: weight.date,
+    weight_difference: weight.weight_difference,
+    weekly_weight_difference: weight.weekly_weight_difference
+  }
+end
