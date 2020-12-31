@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   namespace :api do
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
+    get "/weights" => "weights#index"
+    post "/weights" => "weights#create"
+    get "/sodia" => "sodia#index"
   end
   #   get "/photos" => "photos#index"
   # end

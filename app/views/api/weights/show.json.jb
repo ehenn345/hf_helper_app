@@ -1,0 +1,4 @@
+{
+  current_weight: @weight.current_weight,
+  date: @weight.date
+}
