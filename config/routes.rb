@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get "/weights" => "weights#index"
     post "/weights" => "weights#create"
     get "/sodia" => "sodia#index"
+    post "/sodia" => "sodia#create"
   end
   #   get "/photos" => "photos#index"
   # end
