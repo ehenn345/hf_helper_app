@@ -1,4 +1,5 @@
 class Api::WeightsController < ApplicationController
+  before_action :authenticate_user
   def index
     p "current user"
     p current_user
@@ -13,17 +14,13 @@ class Api::WeightsController < ApplicationController
   end
 
   def create
-    if current_user
-      @weight = Weight.new(
+    @weight = Weight.new(
       user_id: current_user.id,
       current_weight: params[:current_weight],
       date: params[:date],
     )
-      @weight.save 
-      render 'show.json.jb'
-    else
-      render json: []
-    end
+    @weight.save 
+    render 'show.json.jb'
   end
 end
   

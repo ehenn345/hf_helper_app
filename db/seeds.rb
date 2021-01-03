@@ -64,3 +64,4 @@
 
 # Sodium.create(user_id: 2, input_sodium: 200, date: "2020-12-01")
 # Sodium.create(user_id: 3, input_sodium: 300, date: "2020-12-01")
+
