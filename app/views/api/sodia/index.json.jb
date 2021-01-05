@@ -2,6 +2,6 @@
   {
     input_sodium: sodium.input_sodium,
     date: sodium.date,
-    sodium_daily_total: sodium.sodium_daily_total
+    sodium_daily_total: sodium.sodium_daily_total(@date)
   }
 end

@@ -5,13 +5,15 @@ class Api::SodiaController < ApplicationController
     p "current user"
     p current_user
     @sodia = current_user.sodia.where({date: params[:date]})
+    @date = params[:date]
     
-    total_sodium_for_day = 0
-    @sodia.each do |sodium_for_day|
-      total_sodium_for_day += sodium_for_day[:input_sodium]
-    end
-    p "Total sodium"
-    p total_sodium_for_day
+    # total_sodium_for_day = 0
+    # @sodia.each do |sodium_for_day|
+    #   total_sodium_for_day += sodium_for_day[:input_sodium]
+    # end
+    # p "Total sodium"
+    # p total_sodium_for_day
+    render 'index.json.jb'
   end
 
   def create
