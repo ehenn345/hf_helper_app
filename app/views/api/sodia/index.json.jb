@@ -2,6 +2,9 @@
   {
     input_sodium: sodium.input_sodium,
     date: sodium.date,
-    sodium_daily_total: sodium.sodium_daily_total(@date)
+    sodium_daily_total: sodium.sodium_daily_total(@date),
+    user_sodium_limit: current_user.sodium_limit
+    # sodium_left:
+    # sodium.sodium_left(@date)
   }
 end

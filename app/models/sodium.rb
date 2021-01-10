@@ -12,4 +12,10 @@ class Sodium < ApplicationRecord
     p total_sodium_for_day
   end
 
+  # def sodium_left(date)
+  #   sodium_total = sodium_daily_total.where({date: date})
+  #   sodium_left = user.sodium_limit - sodium_total
+  #   p sodium_left
+  # end
+
 end
