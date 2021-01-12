@@ -27,5 +27,19 @@ class Api::SodiaController < ApplicationController
     @sodium.save
     render 'show.json.jb'
   end
+  
+  def show
+    # if params[:quantity].present? && params[:measure].present? && params[:food].present? 
+    response = HTTP.get("https://api.edamam.com/api/nutrition-data?app_id=#{Rails.application.credentials.edamam_id[:key_id]}&app_key=#{Rails.application.credentials.edamam_api[:api_key]}&ingr=#{params[:quantity]}%20#{params[:measure]}%20#{params[:food]}")
+    nutrition_data = response.parse
+    p nutrition_data
+    sodium_value = nutrition_data["totalNutrients"]["NA"]["quantity"]
+    p sodium_value
+    @sodium = Sodium.new(
+    input_sodium: sodium_value
+    )
+    render 'showsodia.json.jb'
+  end
 end
+
 

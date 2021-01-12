@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post "/weights" => "weights#create"
     get "/sodia" => "sodia#index"
     post "/sodia" => "sodia#create"
+    get "/showsodia" => "sodia#show"
   end
   #   get "/photos" => "photos#index"
   # end
