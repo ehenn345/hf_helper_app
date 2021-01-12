@@ -9,7 +9,7 @@ class Weight < ApplicationRecord
     elsif difference >= 2
       p "Your weight gain in 24 hours is #{difference} lbs. Notify your provider immediately."
     else
-      p "You're weight loss is {difference} lbs from yesterday."
+      p "Your weight loss is #{difference} lbs from yesterday."
     end
   end
 
