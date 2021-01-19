@@ -4,10 +4,10 @@ class Weight < ApplicationRecord
   def weight_difference
     difference = user.weights.last[:current_weight] -
     user.weights.slice(-2)[:current_weight]
-    if difference >= 0
-      p "You've gained + #{difference} lbs from yesterday"
-    elsif difference >= 2
+    if difference >= 2
       p "Your weight gain in 24 hours is #{difference} lbs. Notify your provider immediately."
+    elsif difference >= 0
+      p "You've gained + #{difference} lbs from yesterday"
     else
       p "Your weight loss is #{difference} lbs from yesterday."
     end
