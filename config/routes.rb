@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     post "/sodia" => "sodia#create"
     get "/showsodia" => "sodia#show"
   end
+
+  root 'application#index'
+  get '/*path', to: 'application#index' 
   #   get "/photos" => "photos#index"
   # end
   
